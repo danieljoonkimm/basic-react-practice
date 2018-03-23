@@ -12,7 +12,7 @@ class Birthday extends Component {
   
   onClickHandler() {
     for (let key in this.props.birthday) {
-      this.setState({ /* FILL ME IN */ });
+      this.setState({ [key]: this.props.birthday[key] });
     }
   }  
   
@@ -28,6 +28,25 @@ class Birthday extends Component {
 }
 
 export default Birthday;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----------------------
 -------------------------

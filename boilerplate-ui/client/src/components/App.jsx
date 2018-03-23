@@ -11,7 +11,7 @@ class App extends Component {
   
   render() {
     return (
-      <Profile />
+      <Profile users={window.userData}/>
     )
   }
 }

@@ -3,12 +3,12 @@ import Name from '../UserData/Name';
 import Birthday from '../UserData/Birthday';
 import Hobbies from '../UserData/Hobbies';
 class Profile extends Component {
-  constructor() { // FIX ME 
-    super(); // FIX ME
+  constructor(props) {
+    super(props); 
     this.state = {
-      'name': 'changetoprops', // FIX ME
-      'birthday': 'changetoprops', // FIX ME
-      'hobbies': 'changetoprops' // FIX ME
+      'name': this.props.users.name, // FIX ME
+      'birthday': this.props.users.birthday, // FIX ME
+      'hobbies': this.props.users.hobbies // FIX ME
     }
     this.onChangeHandler = this.onChangeHandler.bind(this);
   }
@@ -22,13 +22,13 @@ class Profile extends Component {
       <div>
         <h4>Welcome to my Profile!</h4><br/><br/>
         <input name='name' type='text' defaultValue='Change My Name' onChange={this.onChangeHandler}></input>
-        <Name />{/* FIX ME */}
+        <Name name={this.state.name}/>
         <br/><br/>
         -------------------------------------------------<br/><br/>
-        <Birthday />{/* FIX ME */}
+        <Birthday birthday={this.state.birthday}/>
         <br/><br/>
         -------------------------------------------------<br/><br/>
-        <Hobbies />{/* FIX ME */}
+        <Hobbies hobbies={this.state.hobbies}/>
         <br/><br/>
       </div>
     )
@@ -37,6 +37,17 @@ class Profile extends Component {
 }
 
 export default Profile;
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----------------------
 -------------------------

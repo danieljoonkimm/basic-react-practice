@@ -6,7 +6,7 @@ class Hobbies extends Component {
     this.state = {
       hobbies: this.props.hobbies
     }
-    // bind a function here
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
   
   onClickHandler() {
@@ -33,7 +33,20 @@ class Hobbies extends Component {
 
 export default Hobbies;
 
+
+
+
+
+
+
+
+
+
+
 /* ----------------------
+
+
+
 -------------------------
 SOLUTION BEGINS:
 */
